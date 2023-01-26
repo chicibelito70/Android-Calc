@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="full_clear_label">C</string>
+    <string name="simple_clear_label">CE</string>
+
+    <string name="sum_label">+</string>
+    <string name="subtract_label">-</string>
+    <string name="multiply_label">&#215;</string>
+    <string name="divide_label">&#247;</string>
+    <string name="equals_label">=</string>
+
+    <string name="one_label">1</string>
+    <string name="two_label">2</string>
+    <string name="three_label">3</string>
+    <string name="four_label">4</string>
+    <string name="five_label">5</string>
+    <string name="six_label">6</string>
+    <string name="seven_label">7</string>
+    <string name="eight_label">8</string>
+    <string name="nine_label">9</string>
+    <string name="zero_label">0</string>
+    <string name="point_label">.</string>
+
+    <string name="dop_label">$DOP</string>
+    <string name="dollar_label">$US</string>
+
+</resources>

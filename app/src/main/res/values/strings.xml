@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TestMobile</string>
+    <string name="euro_label">$EUR</string>
+    <string name="franc_label">$CHF</string>
+    <string name="empty_result">0</string>
+    <string name="edit_advice_name">Ingrese su nombre...</string>
+</resources>

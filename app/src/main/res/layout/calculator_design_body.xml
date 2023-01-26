@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit_username"
+        android:layout_width="match_parent"
+        android:hint="@string/edit_advice_name"
+        android:layout_height="wrap_content"
+        android:inputType="textImeMultiLine"
+        android:imeOptions="actionDone"
+        android:maxLines="1"
+        android:layout_marginBottom="10dp"
+        android:maxLength="20" />
+
+    <TableLayout
+        android:id="@+id/body_calculator"
+        android:layout_width="match_parent"
+        android:layout_height="678dp"
+        android:background="@color/button_list_background">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tv_results"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/gray_200"
+                android:paddingVertical="15dp"
+                android:paddingEnd="10dp"
+                android:text="@string/empty_result"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/bottom_separator_70">
+
+            <TableLayout
+                android:id="@+id/table_numbers"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.widget.Button
+                        android:id="@+id/btn_dop"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle_selected"
+                        android:text="@string/dop_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+
+                    <android.widget.Button
+                        android:id="@+id/btn_dollar"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/dollar_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+
+                    <android.widget.Button
+                        android:id="@+id/btn_euro"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/euro_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+
+                    <android.widget.Button
+                        android:id="@+id/btn_franc"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/franc_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <android.widget.Button
+                        android:id="@+id/btn_full_clear"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:layout_span="2"
+                        android:background="@drawable/btn_circle_large"
+                        android:backgroundTint="@color/full_clear_color"
+                        android:text="@string/full_clear_label"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/btn_text_size_medium" />
+
+                    <Button
+                        android:id="@+id/btn_simple_clear"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:layout_span="2"
+                        android:background="@drawable/btn_circle_large"
+                        android:text="@string/simple_clear_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/btn_sum"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/sum_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size_medium" />
+
+                    <Button
+                        android:id="@+id/btn_seven"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/seven_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+
+                    <Button
+                        android:id="@+id/btn_eight"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/eight_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+
+                    <Button
+                        android:id="@+id/btn_nine"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/nine_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/btn_subtract"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/subtract_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size_medium" />
+
+                    <Button
+                        android:id="@+id/btn_four"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/four_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+
+                    <Button
+                        android:id="@+id/btn_five"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/five_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+
+                    <Button
+                        android:id="@+id/btn_six"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/six_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/btn_multiply"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/multiply_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size_medium" />
+
+
+                    <Button
+                        android:id="@+id/btn_one"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/one_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+
+                    <Button
+                        android:id="@+id/btn_two"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/two_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+
+                    <Button
+                        android:id="@+id/btn_three"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/three_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+
+                </TableRow>
+
+                <TableRow android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_divide"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/divide_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size_medium" />
+
+                    <Button
+                        android:id="@+id/btn_point"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle_large"
+                        android:text="@string/point_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size_medium" />
+
+                    <Button
+                        android:id="@+id/btn_zero"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle_large"
+                        android:text="@string/zero_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+
+                    <Button
+                        android:id="@+id/btn_equals"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="@dimen/bottom_height_70"
+                        android:layout_margin="@dimen/btn_margin"
+                        android:background="@drawable/btn_circle"
+                        android:text="@string/equals_label"
+                        android:textColor="@color/teal_700"
+                        android:textSize="@dimen/btn_text_size" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
